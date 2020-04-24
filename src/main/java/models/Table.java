@@ -52,10 +52,10 @@ public class Table {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("Table: " + getTableName() + ": ");
-		sb.append("Column Names: " + printArrays(getColumnNames()) + ", ");
-		sb.append("Column Formats: " + printArrays(getColumnFormats()) + ", ");
-		sb.append("File Path: " + filePath);
+		sb.append(getTableName()).append(",");
+		sb.append(printArrays(getColumnNames()));
+		sb.append(printArrays(getColumnFormats()));
+		sb.append(getFilePath());
 		
 		return sb.toString();
 	}
@@ -64,9 +64,10 @@ public class Table {
 		StringBuilder sb = new StringBuilder();
 		
 		for(String s : array) {
-			sb.append(s + " ");
+			sb.append(s + ",");
 		}
 		
 		return sb.toString().trim();
 	}
+	
 }
